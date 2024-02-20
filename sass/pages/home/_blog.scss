@@ -1,0 +1,102 @@
+@use "../../abstracts" as abst;
+
+.blog {
+  background-color: #fffcf4;
+
+  &-container {
+    padding: 96px 0;
+  }
+
+  &-heading {
+    color: #130606;
+    font-size: 38px;
+    line-height: calc(48 / 38);
+    letter-spacing: -0.76px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &-caption {
+    text-align: center;
+    color: #696262;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    max-width: 448px;
+    margin: 0 auto;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-block: 55px 38px;
+  }
+
+  &-item {
+    @include abst.flexBox(((flex-direction: column)));
+    background-color: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &-content {
+    padding: 20px 20px 28px;
+
+    .button {
+      padding: 12px 21px;
+      background-color: abst.$bg-black;
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      border-radius: 25px;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: abst.$bg-orange;
+      }
+    }
+  }
+
+  &-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+    padding-bottom: 12px;
+    position: relative;
+
+    &:before {
+      content: "";
+      @include abst.size(6px);
+      border-radius: 100rem;
+      background-color: abst.$bg-orange;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include abst.size(160px, 1px);
+      border-radius: 0.5px;
+      background-color: #e2dfda;
+    }
+  }
+
+  &-title {
+    display: inline-block;
+    margin: 12px 0;
+    color: abst.$text-heading;
+    font-size: 16px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(28 / 16);
+  }
+
+  &-dots {
+    margin: 0 auto;
+  }
+}

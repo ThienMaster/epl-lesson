@@ -1,0 +1,101 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  background-color: abst.$bg-brown;
+  color: #bfbcb2;
+
+  &-top {
+    padding: 96px 0 38px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-column {
+    flex-shrink: 0;
+
+    &:not(:first-child) {
+      height: 210px;
+    }
+
+    &:first-child {
+      width: 100%;
+      max-width: 267px;
+      height: 195px;
+    }
+
+    &:last-child {
+      width: 100%;
+      max-width: 231px;
+    }
+  }
+
+  &-caption {
+    margin: 18px 0;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+  }
+
+  &-socials {
+    @include abst.flexBox(((align-items: center, gap: 18px)));
+
+    a {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  &-heading {
+    color: #fff;
+    font-size: 16px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(28 / 16);
+    padding-bottom: 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include abst.size(130px, 1px);
+      background-color: #59554b;
+    }
+  }
+
+  &-links,
+  &-address {
+    margin-top: 28px;
+    @include abst.flexBox(((flex-direction: column, gap: 12px)));
+  }
+
+  &-link {
+    color: #bfbcb2;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+  }
+
+  &-address {
+    font-size: 14px;
+    line-height: calc(26 / 14);
+
+    &-location,
+    &-email,
+    &-phone {
+      color: #fff;
+      @include abst.fontWeight("semibold");
+    }
+  }
+
+  &-bottom {
+    padding: 28px 0;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #59554b;
+
+    p {
+      color: #807d74;
+      line-height: calc(26 / 14);
+    }
+  }
+}

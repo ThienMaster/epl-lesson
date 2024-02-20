@@ -1,0 +1,21 @@
+-
+  var courses_list = [
+    {image: "./images/courses/courses.png", alt: "Basic web design", title: "Basic web design"},
+    {image: "./images/courses/courses_1.png", alt: "UI/UX design", title: "UI/UX design"},
+    {image: "./images/courses/courses_2.png", alt: "Web App design", title: "Web App design"},
+  ];
+
+section.courses#courses
+  .container
+    .courses-top
+      .courses-info
+        h2.heading.courses-heading Our popular courses
+        p.courses-caption Build new skills with new trendy courses and shine for the next future career.
+      .courses-controls
+        .btn-icon
+          i.fa-solid.fa-chevron-left.fa-xs
+        .btn-icon
+          i.fa-solid.fa-chevron-right.fa-xs
+    ul.courses-list
+      each courses_item in courses_list
+        +coursesItem(courses_item.image, courses_item.alt, courses_item.title)

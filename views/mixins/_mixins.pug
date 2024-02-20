@@ -1,0 +1,36 @@
+//- /*---------- Mixin Summary Item ----------*/
+mixin summaryItem(image, alt, label, title)
+  li.hero-summary-item
+    .hero-icon
+      img(src= image, alt= alt)
+    .hero-info
+      p.hero-label= label
+      p.hero-title= title
+
+//- /*---------- Mixin Courses Item ----------*/
+mixin coursesItem(image, alt, title)
+  li.courses-item
+    .courses-image
+      img(src= image, alt= alt)
+    .courses-content
+      .courses-head
+        h3.courses-title
+          a(href="#!")= title
+        .courses-rating
+          img(src="./images/Star 6.svg", alt="star")
+          span 4.5
+      p.courses-desc Get the best course, gain knowledge and shine for your future career.
+      .courses-foot
+        span.courses-price $120.75
+        a.button(href="#!") Book Now
+
+//- /*---------- Mixin Blog Item ----------*/
+mixin blogItem(image, alt)
+  li.blog-item
+    .blog-image
+      img(src= image, alt= alt)
+    .blog-content
+      span.blog-date 21 November 2021
+      a.blog-title(href="#!")  How to become a pro web designer in 2022 and get remot job?
+      a.button(href="#!") Read More
+

@@ -1,0 +1,129 @@
+@use "../../abstracts" as abst;
+
+.courses {
+  margin: 200px 0;
+
+  &-top {
+    margin-bottom: 55px;
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-heading {
+    font-size: 38px;
+    line-height: calc(48 / 38);
+    letter-spacing: -0.76px;
+    margin-bottom: 16px;
+  }
+
+  &-caption {
+    width: 100%;
+    max-width: 458px;
+    font-size: 18px;
+    line-height: calc(30 / 18);
+  }
+
+  &-controls {
+    @include abst.flexBox(((gap: 18px)));
+
+    .btn-icon {
+      @include abst.flexBox(((align-items: center, justify-content: center)));
+      @include abst.size(40px);
+      border-radius: 100rem;
+      border: 1px solid abst.$bg-orange;
+      color: abst.$bg-orange;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: abst.$bg-orange;
+        color: #fff;
+      }
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  &-item {
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2dfda;
+    @include abst.flexBox(((flex-direction: column)));
+  }
+
+  &-image {
+    @include abst.imageCover;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    overflow: hidden;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &-content {
+    padding: 16px 22px 22px;
+  }
+
+  &-head {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-title a {
+    color: abst.$text-heading;
+    font-size: 18px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(30 / 18);
+  }
+
+  &-rating {
+    @include abst.flexBox(((align-items: center, gap: 6px)));
+    color: #fea31b;
+
+    span {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+    }
+  }
+
+  &-desc {
+    margin-block: 6px 12px;
+    font-size: 14px;
+    line-height: calc(26 / 14);
+  }
+
+  &-foot {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+
+    .button {
+      padding: 12px 24px;
+      background-color: abst.$bg-black;
+      font-size: 14px;
+      line-height: calc(26 / 14);
+      border-radius: 25px;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color: abst.$bg-orange;
+      }
+    }
+  }
+
+  &-price {
+    color: abst.$text-heading;
+    font-size: 18px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(30 / 18);
+  }
+}

@@ -1,0 +1,17 @@
+-
+  var blog_list = [
+    {image: "./images/blog/blog.jpg", alt: "How to become a pro web designer in 2022 and get remot job?"},
+    {image: "./images/blog/blog_1.jpg", alt: "How to become a pro web designer in 2022 and get remot job?"},
+    {image: "./images/blog/blog_2.jpg", alt: "How to become a pro web designer in 2022 and get remot job?"}
+  ];
+
+section.blog
+  .container.blog-container
+    .blog-top
+      h2.heading.blog-heading Our blog
+      p.blog-caption Read our regular travel blog and know the latest update of tour and travel
+    ul.blog-list
+      each blog_item in blog_list
+        +blogItem(blog_item.image, blog_item.alt)
+    img.blog-dots(src="./images/dots_1.svg", alt="dots")
+

@@ -1,0 +1,10 @@
+@use "../abstracts" as abst;
+
+.button {
+  all: unset;
+  color: #fff;
+  @include abst.fontWeight("semibold");
+  @include abst.flexBox(((align-items: center, justify-content: center)));
+  cursor: pointer;
+  width: fit-content;
+}

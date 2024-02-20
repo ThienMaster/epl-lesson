@@ -1,0 +1,42 @@
+-
+  var summary_list = [
+    {image: "./images/icons/Orion_page.svg", alt: "Orion_page", label: "20 Courses", title: "UI/UX Design"},
+    {image: "./images/icons/Orion_code-window.svg", alt: "Orion_code-window", label: "20 Courses", title: "Development"},
+    {image: "./images/icons/Orion_megaphone.svg", alt: "Orion_megaphone", label: "30 Courses", title: "Marketing"},
+  ];
+
+header.header
+  nav.header-nav
+    .container.header-nav-container
+      a.logo(href="/")
+        img(src="./images/Lesson..svg", alt="Logo")
+      ul.header-menu
+        each menu in [{href: "/", title: "Home"}, {href: "#courses", title: "Courses"}, {href: "#!", title: "Pricing"}, {href: "#!", title: "Reviews"}]
+          li.header-menu-item
+            a.header-menu-link(href= menu.href)= menu.title
+      a.button(href="#!") Sign Up
+  .hero
+    .container.hero-container
+      .hero-media
+        img(src="./images/guy-lesson 1.png", alt="guy-lesson")
+        ul.hero-summary
+          each summary_item in summary_list
+            +summaryItem(summary_item.image, summary_item.alt, summary_item.label, summary_item.title)
+      .hero-content
+        h1.heading.hero-heading Learn without limits and spread knowledge.
+        p.hero-caption Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.
+        .hero-links
+          a.button(href="#!") See Courses
+          a.hero-play(href="#!")
+            span.hero-play-icon
+              i.fa-solid.fa-play
+            span.hero-play-text Watch Video
+        .hero-recent
+          p Recent engagement
+          .hero-stats
+            .hero-students
+              span.heading.hero-number 50K
+              span.hero-text Students
+            .hero-courses
+              span.heading.hero-number 70+
+              span.hero-text Courses

@@ -1,0 +1,61 @@
+@use "../../abstracts" as abst;
+
+.features {
+  margin: 200px 0;
+
+  &-content {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+  }
+
+  &-image {
+    @include abst.flexBox(((gap: 30px)));
+
+    img {
+      @include abst.size(270px, 405px);
+      object-fit: cover;
+    }
+
+    .lower {
+      margin-top: 35px;
+    }
+  }
+
+  &-info {
+    width: 100%;
+    max-width: 470px;
+
+    span {
+      font-size: 16px;
+      line-height: calc(28 / 16);
+    }
+
+    .button {
+      padding: 11px 37px;
+      background-color: abst.$bg-orange;
+      color: #fff;
+      font-size: 16px;
+      line-height: calc(28 / 16);
+      border-radius: 26px;
+      margin-top: 32px;
+      transition: all 0.2s linear;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &-heading {
+    font-size: 38px;
+    line-height: calc(48 / 38);
+    letter-spacing: -0.76px;
+  }
+
+  &-caption {
+    margin: 16px 0;
+    font-size: 16px;
+    line-height: calc(28 / 16);
+  }
+}

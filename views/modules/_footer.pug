@@ -1,0 +1,48 @@
+footer.footer
+  .container.footer-container
+    .footer-top
+      .footer-column
+        a.logo(href="/")
+          img(src="./images/Lesson._1.svg", alt="Logo")
+        p.footer-caption Need to help for your dream Career? trust us. With Lesson, study becomes a lot easier with us.
+        ul.footer-socials
+          li.footer-socials-item
+            a(href="#!")
+              i.fa-brands.fa-twitter
+          .footer-socials-item
+            a(href="#!")
+              i.fa-brands.fa-facebook-f
+
+          .footer-socials-item
+            a(href="#!")
+              i.fa-brands.fa-linkedin-in
+
+          .footer-socials-item
+            a(href="#!")
+              i.fa-brands.fa-instagram
+      .footer-column
+        h3.heading.footer-heading Company
+        ul.footer-links
+          each link in ["About Us", "Features", "Our Pricing", "Latest News"]
+            li.footer-link-item
+              a(href="#!").footer-link= link
+      .footer-column
+        h3.heading.footer-heading Support
+        ul.footer-links
+          each link in ["FAQ’s", "Terms & Conditions", "Privacy Policy", "Contact Us"]
+            li.footer-link-item
+              a(href="#!").footer-link= link
+      .footer-column
+        h3.heading.footer-heading Address
+        .footer-address
+          .footer-address-item
+            span.footer-address-location Location:
+            span &nbsp;27 Division St, New York, NY 10002, USA
+          .footer-address-item
+            span.footer-address-email Email:
+            span &nbsp;email@gmail.com
+          .footer-address-item
+            span.footer-address-phone Phone:
+            span &nbsp;+ 000 1234 567 890
+    .footer-bottom
+      p Copyright ©2022 webdesign.gdn All rights reserved
